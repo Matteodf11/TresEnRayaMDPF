@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="457.0" prefWidth="377.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.tresenrayafuncionalmdpf.PrimaryController">
+   <children>
+      <VBox prefHeight="129.0" prefWidth="465.0" style="-fx-border-color: black;">
+         <children>
+            <HBox prefHeight="34.0" prefWidth="598.0">
+               <children>
+                  <Label style="-fx-font-weight: bold;" text="PUNTUACION">
+                     <HBox.margin>
+                        <Insets left="5.0" top="5.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox prefHeight="32.0" prefWidth="598.0">
+               <children>
+                  <Label fx:id="jugadorx" style="-fx-font-weight: bold;" text="1er Jugador X:">
+                     <HBox.margin>
+                        <Insets left="5.0" top="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="puntuacionx" alignment="CENTER_RIGHT" editable="false" text="0">
+                     <HBox.margin>
+                        <Insets left="30.0" top="2.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox prefHeight="32.0" prefWidth="598.0">
+               <children>
+                  <Label fx:id="jugadoro" style="-fx-font-weight: bold;" text="2º Jugador O:">
+                     <HBox.margin>
+                        <Insets left="5.0" top="15.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="puntuaciono" alignment="CENTER_RIGHT" editable="false" text="0">
+                     <HBox.margin>
+                        <Insets left="37.0" top="12.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+         </children>
+         <VBox.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </VBox.margin>
+      </VBox>
+      <GridPane fx:id="tablero" gridLinesVisible="true" prefHeight="193.0" prefWidth="297.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button fx:id="botonarribaizquierda" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleButtonClicked" />
+            <Button fx:id="botonarribacentro" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleButtonClicked" GridPane.columnIndex="1" />
+            <Button fx:id="botoncentroizquierda" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleButtonClicked" GridPane.rowIndex="1" />
+            <Button fx:id="botoncentro" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleButtonClicked" prefHeight="64.0" prefWidth="135.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Button fx:id="botonabajoizquierda" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleButtonClicked" GridPane.rowIndex="2" />
+            <Button fx:id="botonabajocentro" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleButtonClicked" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Button fx:id="botonarribaderecha" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleButtonClicked" GridPane.columnIndex="2" />
+            <Button fx:id="botoncentroderecha" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleButtonClicked" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <Button fx:id="botonabajoderecha" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleButtonClicked" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+         </children>
+         <VBox.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </VBox.margin>
+         <opaqueInsets>
+            <Insets left="10.0" right="10.0" />
+         </opaqueInsets>
+      </GridPane>
+      <HBox alignment="CENTER_RIGHT" prefHeight="99.0" prefWidth="377.0">
+         <children>
+            <Button fx:id="botonlimpiar" alignment="CENTER" mnemonicParsing="false" onAction="#handleResetButtonClicked" prefHeight="26.0" prefWidth="68.0" text="Limpiar">
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="botoniniciar" alignment="CENTER" mnemonicParsing="false" onAction="#handleStartButtonClicked" prefHeight="26.0" prefWidth="68.0" text="Iniciar" textFill="#3175cd">
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+</VBox>
